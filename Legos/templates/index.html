@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>LEGOs</title>
+               <link rel="stylesheet" media="screen" href="static/bootstrap.min.css">
+               <link rel="stylesheet" href="static/bootstrap-theme.min.css">
+           <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+</head>
+<div class="container">
+<body>
+    <img src="{{ user_image }}" alt="User Image" height = "25%" width = "25%">
+</body>
+<body>
+    <h1><font face="arial" >Let's build more sets!</font></h1>
+    <br>
+    <form>
+    <div class "form-group">
+          <label for="name"><font face="arial" >What LEGOs set(s) do you have? Enter the set-number, seperated by a comma to see which other sets you can build:</font></label>
+    <br>
+    <input type="text" class="form-control" id="name" name="set_num_search" placeholder="set_number, set_number,..">
+
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</body>
+<body>
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart" id="bargraph">
+                <script>
+                    var graphs = {{plot | safe}};
+                    Plotly.plot('bargraph',graphs,{});
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<body>
+<br>
+<p> <font face="arial" >You can build {{numComp}} complete sets!</font></p>
+</body>
+<body>
+    <h1> <font face="arial" >Keep Building!</font></h1>
+    <br>
+    <form>
+    <div class "form-group">
+          <label for="name"><font face="arial" >Enter the set number to see which parts you need to complete the set:</font></label>
+    <br>
+    <input type = "text" class="form-control" id = "name" name = "find_parts" placeholder="set_number">
+    
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button> 
+    </form>
+</body>
+<body>
+<br>
+<ol>
+{%for i in range(0, len)%}
+
+    <li>{{partslist[i][0]}}</li>
+{%endfor%}
+
+</ol>
+</body>
+</div>
+</html>
+
