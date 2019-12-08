@@ -1,4 +1,4 @@
-import psycopg2
+
 from flask import render_template, request
 import json
 import psycopg2
