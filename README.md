@@ -5,3 +5,7 @@ As a part of Databases for Data Science (CAP5322) for New College of Florida's M
 ## Dataset
 
 We used the [Legos](https://www.kaggle.com/rtatman/lego-database) dataset.
+
+## Attribution
+
+We used this [image](http://pngimg.com/download/51526), license: [Creative Commons 4.0 BY-NC](https://creativecommons.org/licenses/by-nc/4.0/)
